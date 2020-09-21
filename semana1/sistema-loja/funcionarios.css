@@ -1,0 +1,39 @@
+body {
+  background-color: cornsilk;
+}
+
+#funcionarias {
+  background-image: url("https://cdn.pixabay.com/photo/2019/07/24/19/42/cosmetics-4361044_960_720.jpg");
+  background-color: beige;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 30px;
+  color: burlywood;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: indianred;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: indianred;
+  text-decoration: unset;
+  font-family: "Roboto", sans-serif;
+}
