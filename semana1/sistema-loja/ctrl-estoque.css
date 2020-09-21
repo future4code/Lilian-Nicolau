@@ -1,0 +1,41 @@
+body {
+  background-color: cornsilk;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: indianred;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: indianred;
+  text-decoration: unset;
+  font-family: "Roboto", sans-serif;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 30px;
+  color: burlywood;
+  padding-top: 15px;
+  font-family: "Roboto", sans-serif;
+  text-shadow: indianred 1px 1px 1px;
+}
+
+#produtos {
+  color: indianred;
+  text-decoration: unset;
+  font-family: "Roboto", sans-serif;
+  
+}
