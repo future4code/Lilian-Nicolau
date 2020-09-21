@@ -1,0 +1,73 @@
+body{
+    background-color: cornsilk;
+}
+
+
+#cabecalho {
+  background-image: url("https://st4.depositphotos.com/13324256/27780/i/1600/depositphotos_277808058-stock-photo-top-view-coconut-oil-bottle.jpg");
+  background-color: beige;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-left: 45%;
+  font-size: 30px;
+  color: indianred;
+  padding-top: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+#fraseCabecalho {
+  margin-left: 47%;
+  font-size: 30px;
+  color: burlywood;
+  padding-top: 45px;
+  font-family: "Roboto", sans-serif;
+  text-shadow: indianred 1px 1px 1px;
+}
+
+a {
+  color: indianred;
+  text-decoration: unset;
+  font-family: "Roboto", sans-serif;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+#informacoesLoja {
+  font-size: 20px;
+  color: indianred;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+#destaques {
+  display: flex;
+  justify-content: center;
+  color: burlywood;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+  text-shadow: indianred 1px 1px 1px;
+  font-size: 30px;
+}
+
+#rodape {
+  font-size: 20px;
+  color: burlywood;
+  padding-top: 25px;
+  font-family: "Roboto", sans-serif;
+  text-shadow: indianred 1px 1px 1px;
+}
+
+#icones {
+    padding: 10px;
+}
