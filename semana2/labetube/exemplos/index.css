@@ -1,0 +1,44 @@
+header {
+    background-color: brown;
+    font-size: 30px;
+    font-style: 'Roboto';
+    height: 55px;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+h5 {
+    font-size: 15px;
+    font-style: 'Roboto';
+    text-decoration: none;
+    color: peru;
+    align-items: center;
+    
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 10px;
+    margin-top: 10px;
+    margin: 2.5%;
+}
+
+footer {
+    background-color: brown;
+    font-size: 20px;
+    height: 45px;
+    font-style: 'Roboto';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

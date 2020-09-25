@@ -1,0 +1,38 @@
+header {
+    background-color: brown;
+    font-size: 30px;
+    font-style: 'Roboto';
+    height: 55px;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 1.5%;
+}
+
+h5 {
+    font-size: 15px;
+    font-style: 'Roboto';
+    text-decoration: none;
+    color: peru;
+    
+}  
+
+footer {
+    background-color: brown;
+    font-size: 20px;
+    height: 45px;
+    font-style: 'Roboto';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0;
+}
