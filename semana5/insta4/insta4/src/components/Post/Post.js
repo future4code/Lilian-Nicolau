@@ -21,7 +21,7 @@ class Post extends React.Component {
         this.setState({numeroCurtidas: (this.state.numeroCurtidas +1)
         });
       } else {
-        this.setState({numeroCurtidas: (this.state.numeroCurtidas - 1)
+        this.setState({numeroCurtidas: (this.state.numeroCurtidas -1)
         });
       }
     
