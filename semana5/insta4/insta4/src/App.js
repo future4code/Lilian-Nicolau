@@ -64,18 +64,32 @@ class App extends React.Component {
     )
       })
       return (
+        <div className="novasPostagens">
         <input
           value={this.state.valorInputNomeUsuario}
           onChange={this.onChangeInputUsuario}
           placeholder={"Seu nome"}
-        />
+          />
+
+        <input
+          value={this.state.valorInputFotoUsuario}
+          onChange={this.onChangeInputFotoUsuario}
+          placeholder={"Sua foto"}
+          />
+
+        <input
+          value={this.state.valorInputFotoPost}
+          onChange={this.onChangeInputFotoPost}
+          placeholder={"Foto do seu post"}
+          />  
+        
 
         <button onClick={this.adicionaPost}>Adicionar post</button>
 
         <div className="Postagens">
           {listaDePosts}
         </div>
-        
+        </div>
 
       );
       }
