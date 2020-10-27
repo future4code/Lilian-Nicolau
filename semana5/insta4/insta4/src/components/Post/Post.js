@@ -1,5 +1,6 @@
 import React from 'react'
 import './Post.css'
+import styled from 'styled-components'
 
 import {IconeComContador} from '../IconeComContador/IconeComContador'
 
@@ -10,29 +11,31 @@ import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
 class Post extends React.Component {
   state = {
-    curtido: true,  
+    curtido: false,
     numeroCurtidas: 0,
-    comentando: true,
+    comentando: false,
     numeroComentarios: 0
   }
 
   onClickCurtida = () => {
-      if(!this.state.curtido === false) {
-        this.setState({numeroCurtidas: (this.state.numeroCurtidas +1)
-        });
-      } else {
-        this.setState({numeroCurtidas: (this.state.numeroCurtidas - 1)
-        });
-      }
-    
-      console.log('Curtiu!')
+    let novoNumeroCurtidas
+
+    if(this.state.curtido) {
+      novoNumeroCurtidas = this.state.numeroCurtidas - 1
+    } else {
+      novoNumeroCurtidas = this.state.numeroCurtidas + 1
     }
 
-   onClickComentario = () => {
     this.setState({
-      comentando: !this.state.comentando  //Por que o ! aqui? Não entendi porque tem que ser não.
+      curtido: !this.state.curtido,
+      numeroCurtidas: novoNumeroCurtidas
     })
+  }
 
+  onClickComentario = () => {
+    this.setState({
+      comentando: !this.state.comentando
+    })
   }
 
   aoEnviarComentario = () => {
@@ -57,7 +60,7 @@ class Post extends React.Component {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
 
-    return <div className={'post-container'}>         
+    return <div className={'post-container'}>
       <div className={'post-header'}>
         <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
         <p>{this.props.nomeUsuario}</p>
@@ -84,4 +87,3 @@ class Post extends React.Component {
 }
 
 export default Post
-/*Linha 51: Esses valores representam o que vemos renderizado na página: icone é o coração, onClickIcone porque esse ícone é clicável, e valorContaor poque vou contar o número de vezes que o ícone foi clicado. O mesmo acontece com o iconeComentario. Eles vêm duas condicionais, let iconeCurtida e let iconeComentario. Eles serão renderizados na página.*/
