@@ -6,7 +6,7 @@ import PokeCard from "./Components/pokecard";
 
 function App () {
 
-  const [pokeList, setPOkeList] = useState([])
+  const [pokeList, setPokeList] = useState([])
   const [pokeName, setPokeName] = useState('')
 
   useEffect(() => {
