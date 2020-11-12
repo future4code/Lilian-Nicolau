@@ -1,0 +1,20 @@
+p {
+  text-align: center;
+  margin-top: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: purple;
+}
+
+button {
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 250px;
+  height: 30px;
+  margin-left: 40%;
+  background-color: hotpink;
+  font-size: 15px;
+  border: 1px;
+
+}
+
