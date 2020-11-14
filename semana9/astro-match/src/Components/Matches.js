@@ -1,14 +1,55 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import trashIcon from './images/trashIcon.png';
 
 
 const urlGetMatches = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/lilian/matches"
 const urlPutClear = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/lilian/clear"
 
-const DeletarMatches = styled.button`
-    background-color: pink;
+const ButtonTrash = styled.img`
+    width: 4vw;
+    height: 8vh;
 `
+const ButtonBack = styled.button`
+    width: 8vw;
+    height: 6vh;
+    margin-left: 50px;
+`
+const IconesPaginaMatches = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`
+const MatchContainer = styled.div`
+    display:flex;  
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;  
+`
+const MatchPhotos = styled.div`
+    display:flex;    
+    border-radius:5px;
+    padding:1vw;    
+    margin:0.4vw;
+    color:black;
+    text-shadow: 0 0 1vw black;    
+    cursor:default;
+    h3{
+        padding-left:1vw;
+    }
+`
+const ImgMatches = styled.img`
+    width:5vw;
+    height:9vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+
+`
+
+
 
 function Matches (props) {
 
@@ -44,26 +85,32 @@ function Matches (props) {
 
     const matchList = matches.map ((match) => {
         return(
-            <div key={match.id}>
-            <img src={match.photo}/>
+            <MatchPhotos key={match.id}>
+            <ImgMatches src={match.photo}/>
             <h3>{match.name}</h3>
-            </div>
+            </MatchPhotos>
         )
     })
 
     return (
-        <div>
-            Matches
-            <div>
-                <img/>
-                <DeletarMatches  onClick={onClickRefreshMatchesPage}>Deletar matches</DeletarMatches>
-                {matchList}
-                <button onClick={props.onClickMatches}>Profiles</button>
-            </div>
+        
+            
+            <MatchContainer>
 
-        </div>
+                <div>
+                    {matchList}
+                </div>
+
+                <IconesPaginaMatches>
+               <ButtonTrash  src={trashIcon} onClick={onClickRefreshMatchesPage}/> 
+                                
+                <ButtonBack onClick={props.onClickMatches}>Continuar a ver perfis</ButtonBack>
+
+                </IconesPaginaMatches>
+          
+            </MatchContainer>
             
     )
-}
 
+}
 export default Matches
