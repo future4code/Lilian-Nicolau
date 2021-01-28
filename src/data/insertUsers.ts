@@ -1,18 +1,21 @@
 import knex from "knex";
 import dotenv from "dotenv";
+import { USER_ROLES } from "../types/types"
 
 dotenv.config();
 
 export default async function insertUser (
     email: string, 
     password: string, 
-    id: string
+    id: string,
+    role: USER_ROLES
     ) {
     await connection
     .insert ({
         email,
         password,
-        id
+        id,
+        role
     })
     .into("Users")
 }

@@ -2,9 +2,17 @@ import {Request, Response} from "express";
 import insertUser from "../data/insertUsers"
 import {generateId} from "../services/idGenerator";
 import {generateToken} from "../services/authenticator"
+import {hash} from "../services/hashManager"
+import { USER_ROLES } from "../types/types";
 
 
 export default async function createUser (req: Request, res: Response) {
+    
+    const userData = {
+        email: req.body.email,
+        password: req.body.password
+      };
+
     try {
         if(!req.body.email || !req.body.password) {
             throw new Error ("Preencha os campos e-mail e senha, por favor")
@@ -17,11 +25,14 @@ export default async function createUser (req: Request, res: Response) {
         }
     const id: string = generateId();
 
-    await insertUser(
-        req.body.email,
-        req.body.password, 
-        id
+    const hashPassword: string = await hash(userData.password) 
 
+
+    await insertUser(
+        userData.email,
+        hashPassword, 
+        id,
+        req.body.role
     );
 
     const token = generateToken(id)

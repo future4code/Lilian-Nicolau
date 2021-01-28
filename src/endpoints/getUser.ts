@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import searchUserByEmail from "../data/searchEmail";
 import {generateToken} from "../services/authenticator";
+import {compare} from "../services/hashManager";
 
 
 export default async function getUserByEmail (req: Request, res: Response) {
@@ -13,11 +14,20 @@ export default async function getUserByEmail (req: Request, res: Response) {
     try {
         const user = await searchUserByEmail(userData.email)
 
+        const compareResult = await compare(
+            userData.password,
+            user.password
+          );
+      
+          if (!compareResult) {
+            throw new Error("Invalid password");
+          }
+
         if (!req.body.email) {
             throw new Error ("Usuário não encontrado")
         }
 
-        if (req.body.password !== userData.password) {
+        if (user.password !== userData.password) {
             throw new Error ("Senha inválida")
         }
 
