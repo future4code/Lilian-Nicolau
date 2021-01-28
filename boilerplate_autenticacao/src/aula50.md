@@ -28,19 +28,23 @@ Depois consegui continuar vendo as dicas do Notion.
 b) e c) feitas
 
 ### Exercício 5
+
 a) Código no searchEmail.ts
 
 ### Exercício 6
+
 a) Para fazer o endpoint funcionar seguido mais ou menos as dicas do Notion, eu tive que informar o id no body do post, daí o insomia me retornou o token. Código no getUser.ts
 
 ### Exercício 7
+
 Código no autheticator.ts
 
 ### Exercício 8
+
 Eu fiquei confusa no exercício 8 porque primeiro ele pede para pegar o usuário através do token, as no código pega pelo id. Porém, é muito provável ser um problema de entendimento meu do que do exercício...
 Tentei, mas não consegui fazer funcionar. Teste em userProfile.ts e searchProfile.ts
 tokens:
 Magali:
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ5MjNmMzhkLTI4OTgtNDNlMy04MGZmLWFmNzIxODdkMTUzZCIsImlhdCI6MTYxMTc3NzUyNCwiZXhwIjoxNjExNzc3NTg0fQ.Vx4goTEB0YxImKhmamJSpD7vKkQTTTn_cimCiUIUQ5w"
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ5MjNmMzhkLTI4OTgtNDNlMy04MGZmLWFmNzIxODdkMTUzZCIsImlhdCI6MTYxMTc3NzUyNCwiZXhwIjoxNjExNzc3NTg0fQ.Vx4goTEB0YxImKhmamJSpD7vKkQTTTn_cimCiUIUQ5w"
 }
