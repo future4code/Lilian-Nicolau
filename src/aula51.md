@@ -11,6 +11,6 @@ d) Não tenho certeza.
 ### Exercício 3
 a) Aletração na tabela feita.
 b) Não consegui incluir a informação em authenticator.ts.
- 
+ C) lkjflsjfjkdf
 
 
