@@ -13,3 +13,11 @@ export type loginInput = {
     email: string,
     password: string
 }
+
+export type recipeInput = {
+    id: string,
+    title: string,
+    description: string,
+    creation_date: Date,
+    author_id: string,
+}

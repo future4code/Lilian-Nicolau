@@ -4,6 +4,8 @@ import { AddressInfo } from "net";
 import knex from "knex";
 import dotenv from "dotenv";
 import { userSignup } from './endpoints/userSignUp';
+import { userLogin } from './endpoints/userSignIn';
+import { seeUserProfile } from './endpoints/userProfile';
 
 const app: Express = express();
 app.use(express.json());
@@ -12,7 +14,8 @@ app.use(cors());
 //dotenv.config();
 
 app.post("/user/signup", userSignup)
-
+app.post("/user/login", userLogin)
+app.get("/user/profile", seeUserProfile)
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
